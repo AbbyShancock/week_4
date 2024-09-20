@@ -1,7 +1,7 @@
-#############################complete slide 1 challenge from week 4 slideshow##########
-#############################20 minutes################################################
+# #############################complete slide 1 challenge from week 4 slideshow##########
+# #############################20 minutes################################################
 
-##########################Reviewing somethings
+# ##########################Reviewing somethings
 
 # indexing strings -- slide 4
 my_text = 'this is a text '
@@ -68,13 +68,76 @@ print(sentence2[-1:9:3])
 # Reverses the position of all the characters in the following sentence and displays the result on the screen.
 # "It's great to work with computers. They don't argue, they remember everything and they don't drink your beer"
 sentence3 ="It's great to work with computers. They don't argue, they remember everything and they don't drink your beer."
-print(sentence3(rev[::-1]))
+# print(sentence3([::-1]))
+
+
+
+
+
+
+
+
+
+
 ##################################### String Methods#################################
+#uppercasing method in python 
+sentence = "Especially in electronic communications, writing in all caps is equivalent to yelling."
+print(sentence.upper() ) #prints the sentence in uppercase
+#lowercase method in python
+sentence2 = "ESPN IS THE BEST SPORTS NETWORK."
+print(sentence2.lower()) #prints the sentence in lowercase
+print(sentence.find("communications")) #prints the index of the word communications
+#uppercase the word communications in a sentence
+print(sentence.replace("communications", "COMMUNICATION")) #prints the sentence and truns communications into uppercase
+
 # String Methods Practice #1
 #slieds 12 -16
 # Print the following text in uppercase, using the specific string method:
 # "Especially in electronic communications, writing in all caps is equivalent to yelling."
-# sentence = "Especially in electronic communications, writing in all caps is equivalent to yelling."
+sentence3 = "Especially in electronic communications, writing in all caps is equivalent to yelling."
+print(sentence3.replace("electronics", "ELECTRONICS"))
+#or use the upper method
+print(sentence3.replace("communications", "communications".upper()))
+
+new_sentence = "If the implementation is hard to explain, it might be a bad idea."
+#replace the word hard with easy and bad with good
+print(new_sentence.replace("bad", "good").replace("hard", "easy"))
+
+
+#join method
+word_list =["Simple","is","better","than","complex."]
+print(word_list)
+joined_sentence = " ".join(word_list)
+
+new_word_list =["apple","banana","mango","cherry","watermelon."]
+joined_sentence2 = "__".join(new_word_list)
+
+
+#split method
+sentence4 = "I am a python programmer"
+print(sentence4.split()) #splits the sentence into a list of words
+#by default, this method splits the senetnce by commas
+#this prints out ['I', 'am', 'a', 'python', 'programmer']
+
+print(sentence4.split(",")) #splits the sentence into a list of words using a comma.
+#this prints out ["I am a python programmer"]
+
+print(sentence4.split("a")) 
+#this prints out ['I ', 'm ', ' python progr', 'mmer']
+
+#concatenation words in python repetition 15 times
+result = "repetition" * 15
+print(result)
+#prints: repetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetitionrepetition
+
+#find the first paragraph in the declaration of independence
+#replace the word people with citizens in the first paragraph
+#print the first paragraph with the word people replaced w citizerns
+
+declaration = "WHEN in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature’s God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation."
+print(declaration.replace("people", "citizens").replace(" ", "").replace(",", "_"))
+
+
 
 # String Methods Practice #2
 # Join the following list into a string, separating each item with a space. Use the appropriate list/string method, and display the result.
